@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+kennel_votes/
+.pytest_cache/
