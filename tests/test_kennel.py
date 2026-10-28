@@ -23,13 +23,13 @@ def test_client_posts_bearer_and_parses():
         return json.dumps(payload).encode("utf-8")
 
     result = chat(
-        base_url="https://example.com",
+        base_url="https://api.tokenfactory.nebius.com/v1",
         api_key="test-token",
         model="model‑x",
         messages=[{"role": "user", "content": "hi"}],
         opener=dummy_opener,
     )
-    assert captured["url"] == "https://example.com/chat/completions", "Incorrect endpoint URL"
+    assert captured["url"] == "https://api.tokenfactory.nebius.com/v1/chat/completions", "Incorrect endpoint URL"
     assert captured["method"] == "POST", "Request method should be POST"
     assert captured["auth"] == "Bearer test-token", "Missing or wrong Authorization header"
     assert captured["content_type"] == "application/json", "Content‑Type must be application/json"

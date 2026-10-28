@@ -13,6 +13,10 @@ The code is written entirely from scratch; it contains no internal names, paths,
 ## Hackathon track
 Nebius x NVIDIA Global AI Hackathon, Track 2: Best Apps and Agents. Runs on Nebius Token Factory with NVIDIA Nemotron 3 Super (nvidia/nemotron-3-super-120b-a12b) plus two independent open models from other makers: Qwen3 30B (Alibaba) and Gemma 3 27B (Google).
 
+**Live demo:** https://hx6dz3wrnqydy4splilhkpfl5m0ygggd.lambda-url.us-east-2.on.aws/
+
+Votes are kept in the function's temporary storage (`/tmp`), so they reset when the function restarts. Permanent vote storage, and using vote weights to rank answers, are next.
+
 ## Builder credits used
 Builder credits used: Nebius Token Factory
 

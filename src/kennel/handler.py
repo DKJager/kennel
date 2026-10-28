@@ -225,7 +225,7 @@ def lambda_handler(
         if validation_error:
             return _build_response(400, json.dumps({"error": validation_error}))
 
-        votes_dir = os.environ.get("KENNEL_VOTES_DIR", "kennel_votes")
+        votes_dir = os.environ.get("KENNEL_VOTES_DIR", "/tmp/kennel_votes")
         from kennel.rsi import Votes
 
         store = Votes(votes_dir)
